@@ -1,0 +1,30 @@
+service: serverless-websocket-example
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: default
+  stage: dev
+  websocketsApiName: custom-websockets-api-name
+  websocketsApiRouteSelectionExpression: $request.body.action # custom routes are selected by the value of the action property in the body
+
+functions:
+  connect:
+    handler: handler.connect
+    events:
+      - websocket:
+          route: $connect # authorizers are only for connect routes
+          authorizer:
+            name: auth
+            identitySource:
+              - 'route.request.header.Auth'
+  default:
+    handler: handler.default
+    events:
+      - websocket:
+          route: $default
+
+  auth:
+    handler: handler.auth

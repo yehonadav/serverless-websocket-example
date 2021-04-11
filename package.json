@@ -1,0 +1,23 @@
+{
+  "name": "serverless-websocket-example",
+  "version": "1.0.0",
+  "description": "test sls websocket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yehonadav/serverless-websocket-example.git"
+  },
+  "keywords": [
+    "serverless",
+    "websocket"
+  ],
+  "author": "yehonadav bar elan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yehonadav/serverless-websocket-example/issues"
+  },
+  "homepage": "https://github.com/yehonadav/serverless-websocket-example#readme"
+}
