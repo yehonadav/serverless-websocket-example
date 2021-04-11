@@ -1,5 +1,5 @@
 <!--
-title: 'Simple Websocket Authorizers'
+title: 'Serverless Websocket Example With Authorizers'
 description: 'The example shows you how to deploy simple websocket authorizers'
 framework: v1
 platform: AWS
@@ -17,10 +17,12 @@ authorName: 'yehonadav bar elan'
 wscat -c wss://xxxxxxx.execute-api.us-east-1.amazonaws.com/dev
 ```
 
-* Connection should fail. If you try again, this time specifying an `Auth` header:
+* Connection should fail.  
+* Try again, this time specify an `Auth` header:
 
  ```
  wscat -c <wss-url> -H Auth:secret
  ```
+
 * Connection succeeds.
-* Feel free to chat with yourself :)
+* Enjoy chatting with yourself :)
